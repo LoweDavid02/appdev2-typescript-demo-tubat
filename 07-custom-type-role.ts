@@ -11,7 +11,7 @@
         permission: string[];
     }
 
-    let userRole: Role = 'admin'
+    let userRole: Role = 'teacher'
 
     // ...
 
