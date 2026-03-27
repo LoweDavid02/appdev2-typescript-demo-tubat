@@ -1,8 +1,8 @@
-let age: any = 31
+let age: any = 28
 
 // ...
 
-age = '31'
+age = '28'
 age = true
 age = {}
 age = []
