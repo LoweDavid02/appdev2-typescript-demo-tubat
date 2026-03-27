@@ -1,37 +1,20 @@
-// Optional Values in parameter
-function generateError(msg?: string) {
-    throw new Error(msg)
+// 11-optional.ts - Experimentation
+interface Gadget {
+    brand: string;
+    model: string;
+    warrantyMonths?: number; // Optional property
 }
 
-generateError("An error occured") // Automatic Semicolon Insertion pitfall - add ; to explicitly tell that this is a function
-// generateError()
+const myPhone: Gadget = {
+    brand: "Apple",
+    model: "iPhone 15"
+    // warrantyMonths is missing, but it's okay because of the '?'
+};
 
+const myLaptop: Gadget = {
+    brand: "Dell",
+    model: "XPS 13",
+    warrantyMonths: 12 // Provided here
+};
 
-(() => {
-    // Optional Values in object properties
-    type User = {
-        name: string;
-        age: number;
-        role?: 'admin' | 'guess'
-    }
-
-    let user: User = {
-        name: 'Elmer',
-        age: 31
-    }
-
-    user.name
-    user.age
-})
-
-// Nullish Coalescing `??` operator 
-let input = ''
-const didProvideInput = input ?? false;
-
-// try it on browser console log to see results
-// update it `??` to `||`
-// `||` check for falsy not false - falsy = null, undefined, 0, empty string, etc
-// ?? check only if null or undefined
-
-// Use || when you want to fall back on any falsy value.
-// Use ?? when you only want to fall back on null or undefined.
+console.log(myPhone, myLaptop);
