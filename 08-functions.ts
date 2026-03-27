@@ -47,13 +47,13 @@
     }
 
     let user: User = {
-        name: "Elmer",
-        age: 39,
+        name: "David",
+        age: 25,
         // greet: function() {
         //     return this.name
         // }
         greet() {
-            console.log(`Hello, ${this.name}`)
+            console.log(`Welcome, ${this.name}!`)
             return this.name
         }
     }
