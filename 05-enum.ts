@@ -10,5 +10,5 @@
     }
 
     // let userRole: Role = 0;
-    let userRole: Role = Role.SuperAdmin;
+    let userRole: Role = Role.Teacher;
 })
