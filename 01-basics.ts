@@ -1,7 +1,7 @@
 // console.log("Hello World!")
 
-let userName: string = "Elmer";
-let userAge = 31;
+let userName: string = "David";
+let userAge = 25;
 
 // ...
 
