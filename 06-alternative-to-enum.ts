@@ -1,11 +1,11 @@
 (() => {
     // Literal Types (Alternative to Enum)
-    let userRole: 'admin' | 'guess' | 'teacher' | 'student' = 'admin'
+    let userRole: 'admin' | 'guest' | 'teacher' | 'student' = 'teacher'
 
-    userRole = 'guess'
+    userRole = 'guest'
     // anotherUserRole = 'superadmin'
 
-    function access(role: 'admin' | 'guess' | 'teacher' | 'student') {
+    function access(role: 'admin' | 'guest' | 'teacher' | 'student') {
         // ...
     }
 })
