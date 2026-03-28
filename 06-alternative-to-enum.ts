@@ -1,11 +1,9 @@
-(() => {
-    // Literal Types (Alternative to Enum)
-    let userRole: 'admin' | 'guest' | 'teacher' | 'student' = 'teacher'
+type LoweCareerPath = "Web-Developer" | "Mobile-Developer" | "UI-UX-Designer";
 
-    userRole = 'guest'
-    // anotherUserRole = 'superadmin'
+let myCurrentFocus: LoweCareerPath = "Web-Developer";
 
-    function access(role: 'admin' | 'guest' | 'teacher' | 'student') {
-        // ...
-    }
-})
+function updateFocus(newFocus: LoweCareerPath) {
+    console.log(`Lowe David Tubat is now focusing on: ${newFocus}`);
+}
+
+updateFocus("UI-UX-Designer");
