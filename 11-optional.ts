@@ -1,20 +1,13 @@
-// 11-optional.ts - Experimentation
-interface Gadget {
-    brand: string;
-    model: string;
-    warrantyMonths?: number; // Optional property
+interface LoweProject {
+    title: string;
+    liveUrl?: string;
+    tags?: string[];
 }
 
-const myPhone: Gadget = {
-    brand: "Apple",
-    model: "iPhone 15"
-    // warrantyMonths is missing, but it's okay because of the '?'
+const myNewApp: LoweProject = {
+    title: "Mobile Health Tracker"
 };
 
-const myLaptop: Gadget = {
-    brand: "Dell",
-    model: "XPS 13",
-    warrantyMonths: 12 // Provided here
-};
+const projectLink = myNewApp.liveUrl?.toLowerCase() ?? "Link not yet available";
 
-console.log(myPhone, myLaptop);
+console.log(`Project: ${myNewApp.title} | Link: ${projectLink}`);
