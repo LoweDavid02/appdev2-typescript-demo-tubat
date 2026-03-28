@@ -1,14 +1,17 @@
-// 10-type-narrowing.ts - Experimentation
-function formatInput(input: string | number) {
-    // Type Guard/Narrowing
-    if (typeof input === "string") {
-        // TypeScript knows 'input' is a string here
-        return `String input: ${input.toUpperCase()}`;
+const portfolioElement = document.getElementById("lowe-portfolio");
+
+function showDetails() {
+    if (portfolioElement instanceof HTMLElement) {
+        portfolioElement.innerText = "Lowe David Tubat: UI/UX Portfolio Section";
     } else {
-        // TypeScript knows 'input' is a number here
-        return `Number input: $${input.toFixed(2)}`;
+        console.error("The portfolio container was not found in the DOM.");
     }
 }
 
-console.log(formatInput("hello world"));
-console.log(formatInput(150.5));
+const validateInput = (val: string | number) => {
+    if (typeof val === "string") {
+        console.log("Processing designer notes...");
+    } else {
+        console.log("Processing project ID...");
+    }
+};
