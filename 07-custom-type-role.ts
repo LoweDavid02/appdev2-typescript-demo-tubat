@@ -1,21 +1,17 @@
-(() => {
-    // Type Aliases or Custom Types
-    // use `type` keyword to create custom type
-    type Role = 'admin' | 'guess' | 'teacher' | 'student'
+type Aspiration = {
+    role: string;
+    description: string;
+};
 
-    // Complex Object Type Definition
-    type User = {
-        name: string;
-        age: number;
-        role: Role; // you can use as well the Role type in Object type
-        permission: string[];
-    }
+type LoweProfile = {
+    readonly name: string;
+    aspirations: Aspiration[];
+};
 
-    let userRole: Role = 'teacher'
-
-    // ...
-
-    function access(role: Role) {
-        // ...
-    }
-})
+const loweTubat: LoweProfile = {
+    name: "Lowe David Tubat",
+    aspirations: [
+        { role: "Web Dev", description: "Building responsive web apps" },
+        { role: "UI/UX", description: "Designing intuitive user interfaces" }
+    ]
+};
